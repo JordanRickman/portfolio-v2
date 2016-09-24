@@ -1,0 +1,14 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Don't let the browser defaults mess with our layout */
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+}
+

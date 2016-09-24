@@ -1,0 +1,25 @@
+.top-container {
+	margin: 0;
+	width: 100vw;
+	max-width: 100%; /* keeps it inside the vertical scrollbar */
+
+	/* LAYOUT DEBUG */
+	border: 2px solid red;
+}
+@media (max-height: 480px) {
+	.top-container {
+		height: 480px;
+	}
+}
+@media (min-height: 480px) {
+	.top-container {
+		height: 100vh;
+	}
+}
+
+.timeline-container {
+
+	/* LAYOUT DEBUG */
+	border: 2px solid red;
+}
+}
