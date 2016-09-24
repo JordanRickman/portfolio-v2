@@ -1,4 +1,4 @@
-.top-container {
+.top {
 	margin: 0;
 	width: 100vw;
 	max-width: 100%; /* keeps it inside the vertical scrollbar */
@@ -7,19 +7,84 @@
 	border: 2px solid red;
 }
 @media (max-height: 480px) {
-	.top-container {
+	.top {
 		height: 480px;
 	}
 }
 @media (min-height: 480px) {
-	.top-container {
+	.top {
 		height: 100vh;
 	}
 }
 
-.timeline-container {
+.timeline {
 
 	/* LAYOUT DEBUG */
 	border: 2px solid red;
 }
+
+
+.navbar {
+	height: 48px;
+	width: 100vw;
+	max-width: 100%; /* keeps it inside the vertical scrollbar */
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	/* LAYOUT DEBUG */
+	border: 2px solid green;
+}
+.navbar-header, .navbar-links {
+	display: inline-block;
+	height: 100%;
+}
+.navbar-links > a, .navbar-header > span {
+	height: 100%;
+	display: inline-block;
+
+	/* LAYOUT DEBUG */
+	border: 2px solid blue;
+}
+/* use flexbox if supported. if not, the clause below will do nothing,
+ * leaving a small space between (inline-block) navbar items - not ideal, but not really noticeable.
+ */
+.navbar, .navbar-header, .navbar-links {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.navbar-links > a > span, .navbar-header > span > span {
+	display: block;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	/* Center vertically */
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.content {
+	margin-top: 46px; /* -2px from parent border (TODO - remove) */
+	width: 100%;
+	height: calc(100% - 46px);
+
+	/* LAYOUT DEBUG */
+	border: 2px solid green;
+}
+.summary {
+	width: 100%;
+	height: 37.5%; /* 3/8 */
+
+	/* LAYOUT DEBUG */
+	border: 2px solid green;
+}
+.tabs {
+	width: 100%;
+	height: 62.5%; /* 5/8 */
+
+	/* LAYOUT DEBUG */
+	border: 2px solid green;
 }

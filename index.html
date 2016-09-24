@@ -9,19 +9,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" media="screen and (min-width: 768px)" href="tablet_desktop.css" />
-  <script src="main.js"></script>
+  <script src="main.js"></script> 
 </head>
 <body>
-<div class="container page-container" id="page-container">
+<div class="container page" id="page">
 
-  <div class="container top-container" id="top-container">
-    <p>This is the top container, meant to fill the whole screen upon page load.</p>
-    <p><a href="#timeline-container">Timeline</a></p>
+  <div class="container top" id="top">
+    <div class="navbar" id="navbar">
+      <a class="navbar-header"id="navbar-header" href="#top">
+        <span>
+          <span>Portrait/Avatar Here</span><!-- TODO -->
+        </span>
+        <span class="navbar-title" id="navbar-title">
+          <span>Jordan Rickman</span>
+        </span>
+      </a>
+      <!-- TODO hide navigation links until tabs scroll out of view -->
+      <span class="navbar-links" id="navbar-links">
+        <a href="#skills"><span>Skills</span></a>
+        <a href="#demos"><span>Demos</span></a>
+        <a href="#repos"><span>Repos</span></a>
+        <a href="#contact"><span>Contact</span></a>
+      </span>
+    </div>
+
+    <div class="container content" id="content">
+      <div class="summary">This is the summary area.</div>
+      <div class="tabs">This is the tabbed content area.</div>
+    </div>
   </div>
 
-  <div class="container timeline-container" id="timeline-container">
+  <div class="container timeline" id="timeline">
     <p>This is the timeline, which you have to scroll down to see.</p>
-    <p><a href="#top-container">Top</a></p>
   </div>
 
 </div>
