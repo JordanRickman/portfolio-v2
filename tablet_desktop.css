@@ -71,44 +71,32 @@
 	width: 100%;
 	height: 12.5%; /* 1/8 */
 }
-.timeline > div > div {
-	text-align: center;
+
+.timeline > div {
+	position: relative; /* So we can position .download-resume with absolute */
+	width: 100%;
 	height: 50%;
-	padding: 0 5px;
 }
-
-
-/* Horizontal centering of variable-width elements. */
-/* IE9 and below */
-.horzcentercontents {
+.timeline > div > div {
+	width: 100px;
+	height: 100%;
+	margin: 0 auto; /* center */
 	text-align: center;
 }
-.horzcentercontents:before {
-	content: '';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-	margin-right: -0.25em; /* Adjust for spacing between inline-blocks */
-}
-.horzcentercontents > * {
-	display: inline-block;
-	height: 100%;
-}
-/* IE 10 and 11 */
-.horzcentercontents {
-	display: -ms-flexbox;
-	-ms-flex-direction: column;
-	-ms-flex-align: center;
-}
-/* Modern browsers */
-.horzcentercontents {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.download-resume {
+	width: 100px;
+	height: 27.125px; /* minimum size - when viewport shrinks to 480px */
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 10px;
+	text-align: center;
 }
 
 
 /* LAYOUT DEBUG */
+/*
 .container {
 	border: 2px solid blue;
 }
@@ -121,3 +109,4 @@
 .container > .container > .container > * {
 	border-color:  black;
 }
+*/
