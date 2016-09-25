@@ -1,7 +1,15 @@
+.centervertical {
+	position: relative;
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .top {
 	margin: 0;
 	width: 100vw;
 	max-width: 100%; /* keeps it inside the vertical scrollbar */
+	padding-top: 48px; /* push content below the navbar */
 }
 @media (max-height: 480px) {
 	.top {
@@ -12,9 +20,6 @@
 	.top {
 		height: 100vh;
 	}
-}
-
-.timeline {
 }
 
 
@@ -30,7 +35,7 @@
 	display: inline-block;
 	height: 100%;
 }
-.navbar-links > a, .navbar-header > span {
+.navbar-links > a, .navbar-header > div {
 	height: 100%;
 	display: inline-block;
 }
@@ -42,22 +47,17 @@
 	justify-content: flex-start;
 	align-items: stretch;
 }
-.navbar-links > a > span, .navbar-header > span > span {
+.navbar-links > a > div, .navbar-header > div > div {
 	display: block;
 	padding-left: 5px;
 	padding-right: 5px;
-
-	/* Center vertically */
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 
 .content {
-	margin-top: 46px; /* -2px from parent border (TODO - remove) */
+	/*margin-top: 48px;*/
 	width: 100%;
-	height: calc(100% - 46px);
+	height: 100%;
 }
 .summary {
 	width: 100%;
@@ -85,28 +85,11 @@
 }
 .download-resume {
 	width: 100px;
-	height: 27.125px; /* minimum size - when viewport shrinks to 480px */
+	height: 27px; /* minimum size - when viewport shrinks to 480px */
 	position: absolute;
 	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
 	border-radius: 10px;
 	text-align: center;
 }
 
 
-/* LAYOUT DEBUG */
-/*
-.container {
-	border: 2px solid blue;
-}
-.container > .container {
-	border-color: green;
-}
-.container > .container > * {
-	border: 2px solid red;
-}
-.container > .container > .container > * {
-	border-color:  black;
-}
-*/

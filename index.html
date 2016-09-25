@@ -17,38 +17,48 @@
   <div class="container top" id="top">
     <div class="container navbar" id="navbar">
       <a class="container navbar-header"id="navbar-header" href="#top">
-        <span>
-          <span>Portrait/Avatar Here</span><!-- TODO -->
-        </span>
-        <span class="navbar-title" id="navbar-title">
-          <span>Jordan Rickman</span>
-        </span>
+        <div class="container">
+          <div class="centervertical">Portrait/Avatar Here</div><!-- TODO -->
+        </div>
+        <div class="container navbar-title" id="navbar-title">
+          <div class="centervertical">Jordan Rickman</div>
+        </div>
       </a>
       <!-- TODO hide navigation links until tabs scroll out of view -->
-      <span class="container navbar-links" id="navbar-links">
-        <a href="#skills"><span>Skills</span></a>
-        <a href="#demos"><span>Demos</span></a>
-        <a href="#repos"><span>Repos</span></a>
-        <a href="#contact"><span>Contact</span></a>
-      </span>
-    </div>
+      <div class="container navbar-links" id="navbar-links">
+        <a class="container" href="#skills">
+          <div class="centervertical">Skills</div>
+        </a>
+        <a class="container" href="#demos">
+          <div class="centervertical">Demos</div>
+        </a>
+        <a class="container" href="#repos">
+          <div class="centervertical">Repos</div>
+        </a>
+        <a class="container" href="#contact">
+          <div class="centervertical">Contact</div>
+        </a>
+      </div>
+    </div><!-- #navbar -->
 
     <div class="container content" id="content">
       <div class="container summary" id="summary">This is the summary area.</div>
       <div class="container tabs" id="tabs">This is the tabbed content area.</div>
       <div class="container timeline" id="timeline">
-        <div class="container timeline-title" id="timeline-title">
-          <div>Resume</div>
-          <button class="download-resume" id="download-resume">Download</button>
+        <div class="container">
+          <div class="container">
+            <div class="centervertical timeline-title" id="timeline-title">Resume</div>
+          </div>
+          <button class="centervertical download-resume" id="download-resume">Download</button>
         </div>
-        <div class="container timeline-downarrow" id="timeline-downarrow">
-          <div>
-            <a href="#timeline-area">TODO: down arrow</a>
+        <div class="container">
+          <div class="container">
+            <a class="centervertical timeline-downarrow" id="timeline-downarrow" href="#timeline-area">v</a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div><!-- #timeline -->
+    </div><!-- #content -->
+  </div><!-- #top -->
 
   <div class="container timeline-area" id="timeline-area">
     <p>This is the timeline, which you have to scroll down to see.</p>
