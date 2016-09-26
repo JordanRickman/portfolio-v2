@@ -12,3 +12,24 @@ $(document).ready(function(){
     depth++;
   }
 });
+
+
+// Hide navigation buttons except when in view
+function isInViewport(elem) {
+  // Check if element is (at least partially) visible within viewport
+  var navbar = $('#navbar');
+  var viewportTop = $(window).scrollTop() + navbar.height();
+  var viewportBottom = viewportTop + $(window).height() - navbar.height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+}
+$(window).scroll(function(evt) {
+  if ( isInViewport($('#content')) ) {
+    $('#navbar-links').addClass('navbar-hidden');
+  } else {
+    $('#navbar-links').removeClass('navbar-hidden');
+  }
+});
