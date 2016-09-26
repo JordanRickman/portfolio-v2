@@ -15,6 +15,7 @@
 <div class="page" id="page">
 
   <div class="container top" id="top">
+
     <div class="container navbar" id="navbar">
       <a class="container navbar-header"id="navbar-header" href="#top">
         <div class="container">
@@ -26,16 +27,16 @@
       </a>
       <!-- TODO hide navigation links until tabs scroll out of view -->
       <div class="container navbar-links navbar-hidden" id="navbar-links">
-        <a class="container" href="#skills">
+        <a class="container tab-link" href="#skills">
           <div class="centervertical">Skills</div>
         </a>
-        <a class="container" href="#demos">
+        <a class="container tab-link" href="#demos">
           <div class="centervertical">Demos</div>
         </a>
-        <a class="container" href="#repos">
+        <a class="container tab-link" href="#repos">
           <div class="centervertical">Repos</div>
         </a>
-        <a class="container" href="#contact">
+        <a class="container tab-link" href="#contact">
           <div class="centervertical">Contact</div>
         </a>
       </div>
@@ -43,7 +44,37 @@
 
     <div class="container content" id="content">
       <div class="container summary" id="summary">This is the summary area.</div>
-      <div class="container tabs" id="tabs">This is the tabbed content area.</div>
+
+      <div class="container tabs" id="tabs">
+        <div class="container tab-bar" id="tab-bar">
+          <a class="container tab-tab tab-link" href="#skills" id="tab-skills">
+            <div class="tab-label">Skills</div>
+          </a>
+          <a class="container tab-tab tab-link" href="#demos" id="tab-demos">
+            <div class="tab-label">Demos</div>
+          </a>
+          <a class="container tab-tab tab-link" href="#repos" id="tab-repos">
+            <div class="tab-label">Repos</div>
+          </a>
+          <a class="container tab-tab tab-link" href="#contact" id="tab-contact">
+            <div class="tab-label">Contact</div>
+          </a>
+        </div><!-- #tab-bar -->
+
+        <div class="container tab-content tab-active" id="skills">
+          Skills
+        </div>
+        <div class="container tab-content" id="demos">
+          Demos
+        </div>
+        <div class="container tab-content" id="repos">
+          Repos
+        </div>
+        <div class="container tab-content" id="contact">
+          Contact
+        </div>
+      </div>
+
       <div class="container timeline" id="timeline">
         <div class="container">
           <div class="container">
@@ -62,6 +93,7 @@
 
   <div class="container timeline-area" id="timeline-area">
     <p>This is the timeline, which you have to scroll down to see.</p>
+    <p></p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a eros libero. Etiam non consequat enim. Integer massa mi, maximus sit amet efficitur non, bibendum eget felis. In malesuada dignissim risus, porttitor molestie sem dictum et. Sed faucibus enim id consectetur maximus. Praesent sed urna a tellus dapibus feugiat. Phasellus non nisl elementum, tincidunt dolor at, molestie nisi. Ut sit amet nisi ac risus vulputate ornare. Quisque pellentesque nulla augue, et convallis ipsum venenatis non. Integer in sem at arcu auctor varius. Nullam condimentum justo mauris, non congue velit condimentum ac. Aenean non lorem non lectus maximus vestibulum in vel sem. Aliquam aliquet finibus nunc ut lobortis. Mauris vel dui libero.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a eros libero. Etiam non consequat enim. Integer massa mi, maximus sit amet efficitur non, bibendum eget felis. In malesuada dignissim risus, porttitor molestie sem dictum et. Sed faucibus enim id consectetur maximus. Praesent sed urna a tellus dapibus feugiat. Phasellus non nisl elementum, tincidunt dolor at, molestie nisi. Ut sit amet nisi ac risus vulputate ornare. Quisque pellentesque nulla augue, et convallis ipsum venenatis non. Integer in sem at arcu auctor varius. Nullam condimentum justo mauris, non congue velit condimentum ac. Aenean non lorem non lectus maximus vestibulum in vel sem. Aliquam aliquet finibus nunc ut lobortis. Mauris vel dui libero.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a eros libero. Etiam non consequat enim. Integer massa mi, maximus sit amet efficitur non, bibendum eget felis. In malesuada dignissim risus, porttitor molestie sem dictum et. Sed faucibus enim id consectetur maximus. Praesent sed urna a tellus dapibus feugiat. Phasellus non nisl elementum, tincidunt dolor at, molestie nisi. Ut sit amet nisi ac risus vulputate ornare. Quisque pellentesque nulla augue, et convallis ipsum venenatis non. Integer in sem at arcu auctor varius. Nullam condimentum justo mauris, non congue velit condimentum ac. Aenean non lorem non lectus maximus vestibulum in vel sem. Aliquam aliquet finibus nunc ut lobortis. Mauris vel dui libero.</p>

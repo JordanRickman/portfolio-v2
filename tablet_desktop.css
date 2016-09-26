@@ -59,6 +59,44 @@
 }
 
 
+.tab-bar {
+	display: inline-block;
+	width: 10%;
+	height: 100%;
+}
+.tab-content {
+	display: inline-block;
+	width: 90%;
+	height: 100%;
+	margin-right: -90%; /* So next tab overlaps */
+	visibility: hidden; /* active tab will be shown */
+}
+/* use flexbox if supported. if not, the clause below will do nothing,
+ * leaving a small space between (inline-block) navbar items - not ideal, but not really noticeable.
+ */
+.tabs {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.tab-tab {
+	position: relative;
+	display: block;
+	height: 25%;
+	width: 100%;
+}
+.tab-label {
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	transform: translateY(-50%);
+}
+.tab-content.tab-active {
+	visibility: visible;
+}
+
+
+
 .content {
 	/*margin-top: 48px;*/
 	width: 100%;
