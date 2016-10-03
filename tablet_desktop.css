@@ -160,11 +160,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	/* Keep 20px buffer from edges of viewport */
-	/*max-height: calc(100% - 40px);
-	max-width: calc(100% - 40px);*/
 	width: 90vw;
 	height: 90vh;
+	max-width: 824px; /* The Google Doc will expand up to 816px - plus we leave some room for the scrollbar */
 
 	background-color: #BBBBBB;
 	border: 2px solid red;
@@ -183,22 +181,31 @@
 .modal-title {
 	left: 10px;
 }
-.modal-timestamp {
-	/* center horizontally */
-	left: 50%;
-	transform: translateX(-50%);
-}
 .modal-downloadgrp {
 	right: 10px;
 }
 .modal-downloadgrp > * {
 	display: inline-block;
 }
-.modal-downloadgrp > button {
+.modal-downloadgrp > a {
+	height: 100%;
+	text-decoration: none; /* don't underline the text in the buttons */
+}
+.modal-downloadgrp > a > button {
 	height: 24px;
 	border-radius: 10px;
 	text-align: center;
 	padding: 0 10px;
+	cursor: pointer; /* retain the link cursor from the enclosing <a> */
+}
+.modal-content {
+	margin-top: 36px; /* below topbar */
+	height: calc(100% - 36px);
+	width: 100%;
+}
+.modal-content > iframe {
+	height: 100%;
+	width: 100%;
 }
 
 
