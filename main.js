@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // ----- DEBUG Layout -----
   // Color backgrounds for layout debugging
   var colors = [['red', 'darkred'],['palevioletred', 'mediumvioletred'],['lightsalmon', 'coral'],['purple','indigo'],['lightgreen','green'],['paleturquoise','turquoise'],['lightblue','royalblue']];
   var root = $('#page');
@@ -12,7 +13,8 @@ $(document).ready(function(){
     depth++;
   }
 
-  // Select the corrent tab if we load the page with a hash in the URL;
+  // ----- Tab Handling -----
+  // Select the corresponding tab if we load the page with a hash in the URL
   selectTab(window.location.hash);
 
   // Handling tab selection via navigation link
@@ -35,9 +37,28 @@ $(document).ready(function(){
     if ( !isInViewport(activeTab) ) {
       $(document).scrollTop(0);
     }
-  })
+  });
+
+  // ----- Modal Window Handling -----
+  // Open the modal window when the "Download" button is clicked
+  $('#download-resume').click(function(evt) {
+    $('.modal, .modal-dimmer').removeClass('displaynone');
+    // Exit the modal window with escape key
+    $(window).on('keydown.closeModal', function(evt) {
+      if ( evt.which == 27 ) { // 27 = ESC
+        $('.modal, .modal-dimmer').addClass('displaynone');
+        $(window).off('keydown.closeModal'); // thanks to jQuery event namespaces, only this handler will be detached
+      }
+    });
+  });
+  // Exit the modal window when clicking outside of it
+  $('.modal-dimmer').click(function(evt){
+    $('.modal, .modal-dimmer').addClass('displaynone');
+    $(window).off('keydown.closeModal');
+  });
 });
 
+// ----- Tab Handling -----
 // Switch tabs on hash change (from navbar or tab click)
 function selectTab(hash) {
   hash = hash.slice(1); // Strip hash symbol from beginning
@@ -54,6 +75,7 @@ $(window).on("hashchange", function(evt) {
 });
 
 
+// ----- Navbar Button Handling -----
 // Hide navigation buttons except when in view
 function isInViewport(elem) {
   // Check if element is (at least partially) visible within viewport

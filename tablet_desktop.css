@@ -135,4 +135,70 @@
 	text-align: center;
 }
 
+/* ----- Modal Resume Box Layout ----- */
+.displaynone {
+	display: none;
+}
+.modal-dimmer {
+	z-index: 100;
+
+	/* Fill entire viewport */
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	background-color: rgba(0,0,0,0.5);
+}
+.modal {
+	z-index: 101;
+
+	/* Center vertically and horizontally on viewport */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	/* Keep 20px buffer from edges of viewport */
+	/*max-height: calc(100% - 40px);
+	max-width: calc(100% - 40px);*/
+	width: 90vw;
+	height: 90vh;
+
+	background-color: #BBBBBB;
+	border: 2px solid red;
+}
+.modal-topbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 36px;
+}
+.modal-topbar > div {
+	height: 100%;
+	top: 0;
+	position: absolute;
+}
+.modal-title {
+	left: 10px;
+}
+.modal-timestamp {
+	/* center horizontally */
+	left: 50%;
+	transform: translateX(-50%);
+}
+.modal-downloadgrp {
+	right: 10px;
+}
+.modal-downloadgrp > * {
+	display: inline-block;
+}
+.modal-downloadgrp > button {
+	height: 24px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 0 10px;
+}
+
 
